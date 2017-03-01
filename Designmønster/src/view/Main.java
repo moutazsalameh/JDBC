@@ -26,17 +26,17 @@ public class Main {
         Musketeer musketeer = new Musketeer(3, 7, 25, 5);
         RockHauler rockHauler = new RockHauler(5, 10, 15, 6);
         SpearThrower spearThrower = new SpearThrower(4, 15, 30, 2);
-        
-        musketeer.attack(crossbowMan); // Musketeer
-        spearThrower.attack(rockHauler);
+
         crossbowMan.setName("cross");
         rockHauler.setName("rock");
         musketeer.setName("musk");
         spearThrower.setName("sper");
-        
-        crossbowMan.toString();
-        rockHauler.toString();
-        
+        musketeer.attack(crossbowMan); // Musketeer
+        spearThrower.attack(rockHauler);
+//        
+//        crossbowMan.toString();
+//        rockHauler.toString();
+
     }
-    
+
 }
