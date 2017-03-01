@@ -29,18 +29,19 @@ public class InfantryUnit {
         if (damage > reduction) {
             hits = hits - (damage - reduction);
         }
+        System.out.println("armor took "+reduction+" damage");
     }
 
     public void attack(InfantryUnit unit) {
         int attackDamage = (int) (Math.random() * damage) + 1;
         unit.takeDamage(attackDamage);
         System.out.println(this.name + " attacked " + unit.getName());
-        System.out.println(unit.name + "__" + attackDamage);
+        System.out.println(unit.name + "__" + attackDamage + " hits romaning :" + unit.hits);
     }
 
     @Override
     public String toString() {
-        return this.getName() +" "+hits ;
+        return this.getName() + " " + hits;
     }
 
     public String getName() {
